@@ -1,8 +1,18 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 
 module.exports = {
   module: {
+    entry: {
+      'main': './main.js',
+      'pdf.worker': 'pdfjs-dist/build/pdf.worker.entry.js'
+    },
+    output: {
+      path: path.join(__dirname, 'dist'),
+      // publicPath: '../../build/webpack/',
+      filename: 'main.bundle.js'
+    },
     rules: [
       {
         test: /\.js$/,
