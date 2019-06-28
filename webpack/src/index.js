@@ -6,8 +6,8 @@ var pdfjsLib = require('pdfjs-dist');
 var pdfPath = '../src/hello.pdf';
 
 // Setting worker path to worker bundle.
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  './pdf.worker.js';
+// pdfjsLib.GlobalWorkerOptions.workerSrc =
+//   './pdf.worker.bundle.js';
 
 // Loading a document.
 var loadingTask = pdfjsLib.getDocument(pdfPath);
